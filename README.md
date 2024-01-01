@@ -13,6 +13,8 @@ This repository contains code and data for my article "[Graph or Grove? Ecosyste
 
 Neo4j Desktop or AuraDB
 
+GDS
+
 Sklearn
 
 # Run
