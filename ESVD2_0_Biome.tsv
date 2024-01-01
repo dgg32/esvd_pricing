@@ -1,0 +1,193 @@
+code	biome
+1	Marine
+1.1	Shelf sea and coral reefs
+1.1.1	Seagrass meadows
+1.1.2	Kelp Forests
+1.1.3	Coral reefs
+1.1.4	Shellfish beds and reefs
+1.1.5	Benthic systems
+1.1.6	Subtidal rocky reefs
+1.1.7	Subtidal sand beds
+1.1.8	Subtidal mud plains
+1.1.9	Upwelling zones
+1.2	Pelagic
+1.2.1	Epipelagic zone
+1.2.2	Mesopelagic zone
+1.2.3	Bathypelagic zone
+1.2.4	Abysopelagic zone
+1.2.5	Sea Ice
+1.3	Deep sea floor
+1.3.1	Continental and island slopes
+1.3.2	Submarine canyons
+1.3.3	Abyssal plains
+1.3.4	Seamounts, ridges and plateaus
+1.3.5	Deepwater beds
+1.3.6	Trenches and troughs
+1.3.7	Chemosynthetic-based ecosystems
+2	Coastal systems
+2.1	Shorelines
+2.1.1	Rocky shorelines
+2.1.2	Muddy shorelines
+2.1.3	Sandy shorelines
+2.1.4	Boulder and cobble shores
+2.2	Coastal dunes and cliffs
+2.2.1	Coastal dunes
+2.2.2	Coastal cliffs
+2.3	Coastal inlets
+2.3.1	Deepwater coastal inlets
+2.3.2	Riverine estuaries and bays
+2.3.3	Coastal lakes and lagoons
+2.4	Coastal wetlands and river deltas
+2.4.1	Coastal river deltas
+2.4.2	Mangroves
+2.4.3	Coastal salt marshes and reedbeds
+3	Inland wetlands
+3.1	Peatlands
+3.1.1	Tropical flooded forests and peat forests
+3.1.2	Subtropical-temperate forested peatlands
+3.1.3	Peat bogs
+3.1.4	Fens
+3.2	Marshes and swamps
+3.3	Seasonal floodplain marshes
+3.4	Episodic arid floodplains
+3.5	Groundwater dependent wetlands
+4	Rivers and lakes Biome
+4.1	Rivers and streams
+4.1.1	Permanent upland streams
+4.1.2	Permanent lowland rivers
+4.1.3	Freeze-thaw rivers and streams
+4.1.4	Seasonal upland rivers
+4.1.5	Seasonal lowland rivers
+4.1.6	Episodic arid rivers
+4.1.7	Large lowland rivers
+4.2	Freshwater Lakes
+4.2.1	Large permanent freshwater lakes
+4.2.2	Small permanent freshwater lakes
+4.2.3	Seasonal Freshwater lakes
+4.2.4	Freeze-thaw freshwater lakes
+4.2.5	Ephemeral freshwater lakes
+4.2.6	Springs and oases
+4.2.7	Geothermal pools and wetlands
+4.2.8	Sub-glacial lakes
+4.3	Salt lakes
+4.3.1	Permanent salt lakes
+4.3.2	Ephemeral salt lakes
+5	Tropical and subtropical forests
+5.1	Tropical and subtropical lowland rain forests
+5.1.1	Tropical rain forests
+5.1.2	Tropical moist forests
+5.1.3	Subtropical humid forests
+5.2	Tropical and subtropical dry forests
+5.2.1	Tropical dry forests
+5.2.2	Subtropical dry forests
+5.3	Tropical and subtropical mountain forests
+5.3.1	Tropical cloud forests
+5.3.2	Subtropical mountain forests
+5.4	Tropical heath forests
+6	Temperate forests and woodlands
+6.1	Temperate rain or evergreen forests
+6.1.1	Cool temperate moist forests
+6.1.2	Warm temperate rainforests
+6.2	Temperate deciduous forests
+6.2.1	Temperate continental forests
+6.2.2	Temperate mountain forests
+6.3	Temperate pyric forests
+6.3.1	Temperate pyric humid forests
+6.3.2	Temperate pyric sclerophyll forests
+7	Boreal and montane forests and woodlands
+7.1	Boreal Coniferous forests
+7.2	High mountain forests
+8	Shrublands and shrubby woodlands
+8.1	Seasonally dry tropical shrublands
+8.2	Seasonally dry temperate heathand shrublands
+8.3	Cool Temperate Heathlands
+8.5	Inland rock formations
+9	Rangelands, natural grasslands and savannas
+9.1	Tropical and sub-tropical savannas
+9.2	Grassy woodlands and dry grasslands
+9.3	Hummock savannas
+9.4	Temperate grassy woodlands
+9.5	Temperate subhumid grasslands
+10	Desert and semi-deserts
+10.1	Semi-deserts
+10.1.1	Semi-desert steppe
+10.1.2	Succulent or thorny semi-desert
+10.1.3	Sclerophyll hot semi-deserts
+10.1.4	Cool semi-deserts
+10.2	True deserts
+10.2.1	Hyper and arid deserts
+10.2.2	Salt deserts
+10.2.3	Rocky deserts
+11	Polar-alpine
+11.1	Ice sheets, glaciers and perennial snowfields
+11.2	Polar-alpine rocky outcrops
+11.3	Polar tundra and deserts
+11.4	Temperate alpine meadows andshrublands
+11.5	Tropical alpine grasslands and herbfields
+12	Subterranean
+12.1	Subterranean lithic systems
+12.2	Anthropogenic subterranean voids
+12.3	Subterranean freshwater
+12.4	Anthropogenic subterraneanfreshwater
+12.5	Subterranean tidal caves
+13	Intensive land use
+13.1	Annual cropland
+13.1.1	Intensive annual cropland
+13.1.2	Extensive annual cropland
+13.1.3	Irrigated annual cropland
+13.2	Sown pastures and fields
+13.3	Perennial agro-forestry
+13.3.1	Fallow
+13.3.2	Hedgerows
+13.3.3	Alley cropping
+13.3.4	Multi-strata systems
+13.3.5	Parklands
+13.3.6	Shaded perennial crop systems
+13.3.7	Silvo-arable systems
+13.3.8	Silvo-pastoral systems
+13.4	Perennial monoculture
+13.4.1	Plantations
+13.4.2	Vinyards
+13.4.3	Orchards
+13.4.4	Short rotation coppice
+13.5	Semi-natural pastures and old fields
+13.6	Rice paddies
+13.6.1	Permanently inundated ricepaddies
+13.6.2	Temporary inundated rice paddies
+13.7	Freshwater aquaculture
+13.7.1	Purpose built constructions foraquaculture
+13.7.2	Cages within natural and semi-natural freshwater
+13.7.3	Rice-fish co-culture
+13.8	Marine aquaculture
+13.8.1	Marine aquafarms
+13.8.2	Aquaculture ponds in coastalsystems
+14	Human made structures
+14.1	Anthropogenic freshwater structures
+14.1.1	Large reservoirs
+14.1.2	Constructed lacustrine wetlands
+14.1.3	Artificial water courses
+14.2	Anthropogenic marine structures
+14.2.1	Submerged artificial structures
+14.2.2	Other anthropogenic marinesystems
+14.3	Anthropogenic shoreline structures
+15	Urban and Industrial areas
+15.1	Urban green and blue infrastructure
+15.1.1	Urban parks and forests
+15.1.2	Lawns, sports fields, golf courses
+15.1.3	Urban lakes, ponds, wetlands
+15.1.4	Urban and peri-urban cultivation
+15.1.5	Street trees and shrubs
+15.1.6	Other green infrastructure
+15.1.7	Other blue infrastructure
+15.2	Artificial urban surfaces
+15.2.1	Continuous urban surfaces
+15.2.2	Discontinuous urban surfaces
+15.3	Industrial, commercial and transport units
+15.3.1	Industrial and commercial units
+15.3.2	Roads and rail networks
+15.3.3	Port areas
+15.3.4	Airports
+15.4	Mine, dump and construction sites
+15.4.1	Mineral extraction sites
+15.4.2	Dump sites
+15.4.3	Construction sites

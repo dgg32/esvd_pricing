@@ -1,0 +1,78 @@
+code	class_type	name
+1.1.1.1	Crops by amount, type (e.g. cereals, root crops, soft fruit, etc.)	Cultivated terrestrial plants (including fungi, algae) grown for nutritional purposes
+1.1.1.2	Material by amount, type, use, media (land, soil, freshwater, marine)	Fibres and other materials from cultivated plants, fungi, algae and bacteria for direct use or processing
+1.1.1.3	By amount, type, source	Cultivated plants (including fungi, algae) grown as a source of  energy
+1.1.2.1	Plants, algae by amount, type	Cultivated plants grown for nutritional purposes by in- situ aquaculture
+1.1.2.2	Plants, algae by amount, type	Cultivated plants grown for material purposes by in- situ aquaculture (excluding genetic materials)
+1.1.2.3	Plants, algae by amount, type	Cultivated plants grown as a source of energy by in-situ aquaculture
+1.1.3.1	Animals, products by amount, type (e.g. beef, dairy)	Animals reared to provide nutrition
+1.1.3.2	Material by amount, type, use, media (land, soil, freshwater, marine)	Fibres and other materials from reared animals for direct use or processing (excluding genetic materials)
+1.1.3.3	By amount, type, source	Animals reared to provide energy (including mechanical)
+1.1.4.1	Animals by amount, type	Animals reared by in-situ aquaculture for nutritional purposes
+1.1.4.2	Animals by amount, type	Animals reared by in-situ aquaculture for material purposes (excluding genetic materials)
+1.1.4.3	Animals by amount, type	Animals reared by in-situ aquaculture as an energy source
+4.2.1.1	By amount, type, source	Surface water for drinking
+4.2.1.2	By amount & source	Surface water used as a material (non- drinking purposes)
+4.2.1.3	By amount, type, source	Freshwater surface water used as an energy source
+4.2.1.4	By amount, type, source	Coastal and marine water used as energy source
+4.2.2.1	By amount, type, source	Ground water for drinking
+4.2.2.2	By amount & source	Ground water used as a material (non- drinking purposes)
+4.2.2.3	By amount & source	Ground water used as an energy source
+4.2.X.X	Use nested codes to allocate other provisioning services from non-living systems to appropriate	Other
+2.1.1.1	By type of living system or by waste or subsistence type	Bio-remediation by micro-organisms, algae, plants, and animals
+2.1.1.2	By type of living system, or by water or substance type	Filtration/sequestration/storage/accumulatio n by micro-organisms, algae, plants, and animals
+2.1.2.1	By type of living system	Smell reduction
+2.1.2.2	By type of living system	Noise attenuation
+2.1.2.3	By type of living system	Visual screening
+2.2.1.1	By reduction in risk, area protected	Control of erosion rates
+2.2.1.2	By reduction in risk, area protected	Buffering and attenuation of mass movement
+2.2.1.3	By depth/volumes	Hydrological cycle and water flow regulation (Including flood control)
+2.2.1.4	By reduction in risk, area protected	Storm protection
+2.2.1.5	By reduction in risk, area protected	Fire protection
+2.2.2.1	By amount and pollinator	Pollination (or 'gamete' dispersal in a marine context)
+2.2.2.2	By amount and dispersal agent	Seed dispersal
+2.2.2.3	By amount and source	Maintaining nursery populations and habitats (Including gene pool protection)
+2.2.3.1	By reduction in incidence, risk, area protected by type of living system	Pest control (including invasive species)
+2.2.3.2	By reduction in incidence, risk, area protected by type of living system	Disease control
+2.2.4.1	By amount/concentration and source	Weathering processes and their effect on soil quality
+2.2.4.2	By amount/concentration and source	Decomposition and fixing processes and their effect on soil quality
+2.2.5.1	By type of living system	Regulation of the chemical condition of freshwaters by living processes
+2.2.5.2	By type of living system	Regulation of the chemical condition of salt waters by living processes
+2.2.6.1	By contribution of type of living system to amount, concentration or climatic parameter	Regulation of chemical composition of atmosphere
+2.2.6.2	By contribution of type of living system to amount, concentration or climatic parameter	Regulation of temperature and humidity, including ventilation and transpiration
+2.3.X.X	Use nested codes to allocate other regulating and maintenance services from living systems to	Other
+3.1.1.1	By type of living system or environmental setting	Characteristics of living systems that that enable activities promoting health, recuperation or enjoyment through active or immersive interactions
+3.1.1.2	By type of living system or environmental setting	Characteristics of living systems that enable activities promoting health, recuperation or enjoyment through passive or observational interactions
+3.1.2.1	By type of living system or environmental setting	Characteristics of living systems that enable scientific investigation or the creation of traditional ecological knowledge
+3.1.2.2	By type of living system or environmental setting	Characteristics of living systems that enable education and training
+3.1.2.3	By type of living system or environmental setting	Characteristics of living systems that are resonant in terms of culture or heritage
+3.1.2.4	By type of living system or environmental setting	Characteristics of living systems that enable aesthetic experiences
+3.2.1.1	By type of living system or environmental setting	Elements of living systems that have symbolic meaning
+3.2.1.2	By type of living system or environmental setting	Elements of living systems that have sacred or religious meaning
+3.2.1.3	By type of living system or environmental setting	Elements of living systems used for entertainment or representation
+3.2.2.1	By type of living system or environmental setting	Characteristics or features of living systems that have an existence value
+3.2.2.2	By type of living system or environmental setting	Characteristics or features of living systems that have an bequest value
+3.3.X.X	Use nested codes to allocate other cultural services from living systems to appropriate Groups and Classes	Other
+4.3.1.1	Amount by type	Mineral substances used for nutrition
+4.3.1.2	Amount by type	Mineral substances used for material purposes
+4.3.1.3	Amount by type	Mineral substances used for as an energy source
+4.3.2.1	Amount by type	Non-mineral substances or ecosystem properties used for nutrition
+4.3.2.2	Amount by type	Non-mineral substances used for materials
+4.3.2.3	Amount by type	Wind energy
+4.3.2.4	Amount by type	Solar energy
+4.3.2.5	Amount by type	Geothermal
+4.3.2.6	Use nested codes to allocate other provisioning services from non-living systems to appropriate Groups and Classes	Other
+5.1.1.1	Amount by type	Dilution by freshwater and marine ecosystems
+5.1.1.2	Amount by type	Dilution by atmosphere
+5.1.1.3	Amount by type	Mediation by other chemical or physical means (e.g. via Filtration, sequestration, storage or accumulation)
+5.1.2.1	Amount by type	Mediation of nuisances by abiotic structures or processes
+5.2.1.1	Amount by type	Mass flows
+5.2.1.2	Amount by type	Liquid flows
+5.2.1.3	Amount by type	Gaseous flows
+5.2.2.1	Amount by type	Maintenance and regulation by inorganic natural chemical and physical processes
+5.3.X.X	Use nested codes to allocate other provisioning services from non-living systems to appropriate Groups and Classes	Other
+6.1.1.1	Amount by type	Natural, abiotic characteristics of nature that enable active or passive physical and experiential interactions
+6.1.2.1	Amount by type	Natural, abiotic characteristics of nature that enable intellectual interactions
+6.2.1.1	Amount by type	Natural, abiotic characteristics of nature that enable spiritual, symbolic and other interactions
+6.2.2.1	Amount by type	Natural, abiotic characteristics or features of nature that have either an existence or bequest value
+6.3.X.X	Use nested codes to allocate other provisioning services from non-living systems to appropriate Groups and Classes	Other

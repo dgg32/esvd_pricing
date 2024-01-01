@@ -1,0 +1,93 @@
+CALL gds.graph.project(
+  'contextGraph',
+  {
+    Known: { properties:['protection_status_one_hot', 'site_area_in_hectares', 'site_length_km', 'valuation_methods_one_hot', 'value_year', 'beneficiary_unit_one_hot', 'int__per_hectare_per_year'] },
+    Unknown: {properties:['protection_status_one_hot', 'site_area_in_hectares', 'site_length_km', 'valuation_methods_one_hot', 'value_year', 'beneficiary_unit_one_hot']},
+    Country: {},
+    Seea: {},
+    Ecosystem: {},
+    Ecozone: {},
+    Biome: {},
+    Cices_class: {},
+    Cices_division: {},
+    Cices_group: {},
+    Cices_section: {},
+    Teeb_service: {},
+    Teeb_subservice: {},
+    Teeb_category: {},
+    Subregion: {},
+    Region: {}
+  },
+  {
+    IS_LOCATE_IN: {orientation: 'UNDIRECTED'},
+    IS_AN_SEEA_OF: {orientation: 'UNDIRECTED'},
+    IS_AN_ECOSYSTEM_OF: {orientation: 'UNDIRECTED'},
+    ECOSYSTEM_BELONGS_TO: {orientation: 'UNDIRECTED'},
+    IS_AN_ECOZONE_OF: {orientation: 'UNDIRECTED'},
+    ECOZONE_BELONGS_TO: {orientation: 'UNDIRECTED'},
+    IS_A_BIOME_OF: {orientation: 'UNDIRECTED'},
+    BELONGS_TO_CLASS_OF_CICES: {orientation: 'UNDIRECTED'},
+    IS_A_GROUP_OF_CICES: {orientation: 'UNDIRECTED'},
+    IS_A_DIVISION_OF_CICES: {orientation: 'UNDIRECTED'},
+    IS_A_CLASS_OF_CICES: {orientation: 'UNDIRECTED'},
+    PROVIDES_SERVICE: {orientation: 'UNDIRECTED'},
+    PROVIDES_SUBSERVICE: {orientation: 'UNDIRECTED'},
+    COUNTRY_IS_LOCATE_IN: {orientation: 'UNDIRECTED'},
+    SUBREGION_IS_LOCATE_IN: {orientation: 'UNDIRECTED'},
+    IS_A_SUBSERVICE_OF: {orientation: 'UNDIRECTED'},
+    IS_A_SERVICE_OF:  {orientation: 'UNDIRECTED'}
+  }
+);
+
+CALL gds.node2vec.mutate('contextGraph', {
+    embeddingDimension: 16,
+    mutateProperty: "node_vec_embedding",
+    iterations: 5
+})
+YIELD nodePropertiesWritten
+
+CALL gds.graph.nodeProperties.stream(
+    'contextGraph',
+    ['node_vec_embedding'],
+    ["Known", "Unknown"]
+)
+
+CALL gds.alpha.pipeline.nodeRegression.create('pipe-with-context');
+
+CALL gds.alpha.pipeline.nodeRegression.selectFeatures('pipe-with-context', ['node_vec_embedding']);
+
+
+CALL gds.alpha.pipeline.nodeRegression.addRandomForest('pipe-with-context', {numberOfDecisionTrees: 10})
+YIELD parameterSpace;
+
+CALL gds.alpha.pipeline.nodeRegression.train('contextGraph', {
+  pipeline: 'pipe-with-context',
+  targetNodeLabels: ['Known'],
+  modelName: 'nr-pipeline-model-contextual',
+  targetProperty: 'int__per_hectare_per_year',
+  metrics: ['ROOT_MEAN_SQUARED_ERROR']
+}) YIELD modelInfo
+RETURN
+  modelInfo.bestParameters AS winningModel,
+  modelInfo.metrics.ROOT_MEAN_SQUARED_ERROR.train.avg AS avgTrainScore,
+  modelInfo.metrics.ROOT_MEAN_SQUARED_ERROR.outerTrain AS outerTrainScore,
+  modelInfo.metrics.ROOT_MEAN_SQUARED_ERROR.test AS testScore;
+
+CALL gds.alpha.pipeline.nodeRegression.predict.stream('contextGraph', {
+  modelName: 'nr-pipeline-model-contextual',
+  targetNodeLabels: ['Unknown']
+}) YIELD nodeId, predictedValue
+WITH gds.util.asNode(nodeId) AS Site, predictedValue AS predictedValue
+RETURN
+  Site.name AS Site, predictedValue
+  ORDER BY predictedValue;
+
+CALL gds.pipeline.drop('pipe-with-context');
+
+CALL gds.graph.drop('contextGraph');
+
+CALL gds.model.drop('nr-pipeline-model-contextual');
+
+//Result
+avgTrainScore	outerTrainScore	testScore
+33833.715873445115	32852.868247355334	44545.6782044604

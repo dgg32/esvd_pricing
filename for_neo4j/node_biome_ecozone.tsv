@@ -1,0 +1,61 @@
+name	code
+Shelf sea and coral reefs	1.1
+Pelagic	1.2
+Deep sea floor	1.3
+Shorelines	2.1
+Coastal dunes and cliffs	2.2
+Coastal inlets	2.3
+Coastal wetlands and river deltas	2.4
+Peatlands	3.1
+Marshes and swamps	3.2
+Seasonal floodplain marshes	3.3
+Episodic arid floodplains	3.4
+Groundwater dependent wetlands	3.5
+Rivers and streams	4.1
+Freshwater Lakes	4.2
+Salt lakes	4.3
+Tropical and subtropical lowland rain forests	5.1
+Tropical and subtropical dry forests	5.2
+Tropical and subtropical mountain forests	5.3
+Tropical heath forests	5.4
+Temperate rain or evergreen forests	6.1
+Temperate deciduous forests	6.2
+Temperate pyric forests	6.3
+Boreal Coniferous forests	7.1
+High mountain forests	7.2
+Seasonally dry tropical shrublands	8.1
+Seasonally dry temperate heathand shrublands	8.2
+Cool Temperate Heathlands	8.3
+Inland rock formations	8.5
+Tropical and sub-tropical savannas	9.1
+Grassy woodlands and dry grasslands	9.2
+Hummock savannas	9.3
+Temperate grassy woodlands	9.4
+Temperate subhumid grasslands	9.5
+Semi-deserts	10.1
+True deserts	10.2
+Ice sheets, glaciers and perennial snowfields	11.1
+Polar-alpine rocky outcrops	11.2
+Polar tundra and deserts	11.3
+Temperate alpine meadows andshrublands	11.4
+Tropical alpine grasslands and herbfields	11.5
+Subterranean lithic systems	12.1
+Anthropogenic subterranean voids	12.2
+Subterranean freshwater	12.3
+Anthropogenic subterraneanfreshwater	12.4
+Subterranean tidal caves	12.5
+Annual cropland	13.1
+Sown pastures and fields	13.2
+Perennial agro-forestry	13.3
+Perennial monoculture	13.4
+Semi-natural pastures and old fields	13.5
+Rice paddies	13.6
+Freshwater aquaculture	13.7
+Marine aquaculture	13.8
+Anthropogenic freshwater structures	14.1
+Anthropogenic marine structures	14.2
+Anthropogenic shoreline structures	14.3
+Urban green and blue infrastructure	15.1
+Artificial urban surfaces	15.2
+Industrial, commercial and transport units	15.3
+Mine, dump and construction sites	15.4

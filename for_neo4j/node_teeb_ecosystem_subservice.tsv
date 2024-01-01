@@ -1,0 +1,81 @@
+code	name
+11	Fish
+12	Meat
+13	Plants / vegetable food
+14	NTFPs [food only!]
+15	Food [unspecified]
+16	Other
+21	Drinking water
+22	Industrial water
+23	Water Other
+25	Irrigation water [unnatural]
+26	Water [unspecified]
+31	Fibers
+32	Timber
+33	Fuel wood and charcoal
+34	Fodder
+35	Fertiliser
+36	Other Raw
+37	Raw materials [unspecified]
+38	Sand, rock, gravel
+39	Biomass fuels
+41	Plant genetic resources
+42	Animal genetic resources
+43	Genetic resources [unspecified]
+51	Biochemicals
+52	Models
+53	Test-organisms
+54	Bioprospecting
+61	Decorative Plants
+62	Fashion
+63	Decorations / Handicrafts
+64	Pets and captive animanls
+71	Capturing fine dust
+72	Air quality regulation [unspecified]
+73	UVb-protection
+81	C-sequestration
+82	MDS-production
+83	Climate regulation [unspecified]
+84	Microclimate regulation
+85	Gas regulation
+91	Storm protection
+92	Flood prevention
+93	Fire Prevention
+94	Prevention of extreme events [unspecified]
+101	Drainage
+102	River discharge
+103	Natural irrigation
+104	Water regulation [unspecified]
+111	Water purification
+112	Soil detoxification
+113	Abatement of noise
+114	Waste treatment [unspecified]
+121	Erosion prevention
+131	Maintenance of soil structure
+132	Deposition of nutrients
+133	Soil formation
+134	Nutrient cycling
+141	Pollination of crops
+142	Pollination of wild plants
+143	Pollination [unspecified]
+151	Seed dispersal
+152	Pest control
+153	Disease control
+154	Biological Control [unspecified]
+161	Nursery service
+162	Refugia for migratory and resident species
+171	Biodiversity protection
+181	Attractive landscapes
+191	Recreation
+192	Tourism
+193	Ecotourism
+194	Hunting / fishing
+201	Artistic inspiration
+202	Cultural use
+203	Inspiration [unspecified]
+211	Spiritual / Religious use
+221	Science / Research
+222	Education
+223	Cognitive [unspecified]
+231	Existence value
+232	Bequest value

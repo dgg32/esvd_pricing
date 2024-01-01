@@ -1,0 +1,134 @@
+CREATE CONSTRAINT IF NOT EXISTS FOR (v:Site) REQUIRE v.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (c:Country) REQUIRE c.code IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (s:Subregion) REQUIRE s.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (r:Region) REQUIRE r.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Ecosystem) REQUIRE e.code IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Ecozone) REQUIRE e.code IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Biome) REQUIRE e.code IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Cices_class) REQUIRE e.code IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Cices_division) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Cices_group) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Cices_section) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Seea) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Teeb_category) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Teeb_service) REQUIRE e.name IS UNIQUE
+;
+CREATE CONSTRAINT IF NOT EXISTS FOR (e:Teeb_subservice) REQUIRE e.code IS UNIQUE
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_values.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Site {name: row.name, study_id: row.study_id, study_location: row.study_location, protection_status: row.protection_status, 
+latitude: coalesce(toFloat(row.latitude), 0.0), longitude: coalesce(toFloat(row.longitude), 0.0), valuation_methods: split(coalesce(row.valuation_methods, ''), '|'), beneficiary_unit: row.beneficiary_unit, 
+value_year: date(row.value_year).year, int__per_hectare_per_year: coalesce(toFloat(row.int__per_hectare_per_year), 0.0), title: row.title, reference: row.reference, year_pub: date(row.year_pub).year, 
+site_area_in_hectares: coalesce(toFloat(row.site_area_in_hectares), 0.0), site_length_km: coalesce(toFloat(row.site_length_km), 0.0)})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_biome_biome.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Biome {name: row.name, code: row.code})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_biome_ecosystem.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Ecosystem {name: row.name, code: row.code})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_biome_ecozone.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Ecozone {name: row.name, code: row.code})
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///node_cices_class.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Cices_class {name: row.name, code: row.code, class_type: row.class_type})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_cices_division.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Cices_division {name: row.name})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_cices_group.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Cices_group {name: row.name})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_cices_section.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Cices_section {name: row.name})
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///node_countries_countries.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Country {name: row.name, code: row.code})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_countries_subregion.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Subregion {name: row.name})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_countries_region.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Region {name: row.name})
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///node_seea.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Seea {name: row.name})
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///node_teeb_category.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Teeb_category {name: row.name})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_teeb_ecosystem_service.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Teeb_service {name: row.name})
+;
+LOAD CSV WITH HEADERS FROM 'file:///node_teeb_ecosystem_subservice.tsv' AS row FIELDTERMINATOR '\t' MERGE (c:Teeb_subservice {name: row.name, code: row.code})
+;
+
+
+LOAD CSV WITH HEADERS FROM 'file:///relation_biome_ecozone.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Ecozone {code: row.from}) MERGE (p2:Biome {code: row.to}) MERGE (p1)-[r:ECOZONE_BELONGS_TO]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_biome_ecozone_ecosystem.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Ecosystem {code: row.from}) MERGE (p2:Ecozone {code: row.to}) MERGE (p1)-[r:ECOSYSTEM_BELONGS_TO]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_biome_ecosystem_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Ecosystem {code: row.to}) MERGE (p1)-[r:IS_AN_ECOSYSTEM_OF]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_biome_ecozone_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Ecozone {code: row.to}) MERGE (p1)-[r:IS_AN_ECOZONE_OF]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_biome_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Biome {code: row.to}) MERGE (p1)-[r:IS_A_BIOME_OF]->(p2)
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///relation_teeb_subservice_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Teeb_subservice {code: row.to}) MERGE (p1)-[r:PROVIDES_SUBSERVICE]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_teeb_service_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Teeb_service {code: row.to}) MERGE (p1)-[r:PROVIDES_SERVICE]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_teeb_ecosystem_service_ecosystem_subservice.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Teeb_subservice {code: row.from}) MERGE (p2:Teeb_service {name: row.to}) MERGE (p1)-[r:IS_A_SUBSERVICE_OF]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_teeb_category_ecosystem_service.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Teeb_service {name: row.from}) MERGE (p2:Teeb_category {name: row.to}) MERGE (p1)-[r:IS_A_SERVICE_OF]->(p2)
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///relation_seea_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Seea {name: row.to}) MERGE (p1)-[r:IS_AN_SEEA_OF]->(p2)
+;
+
+
+LOAD CSV WITH HEADERS FROM 'file:///relation_countries_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Country {code: row.to}) MERGE (p1)-[r:IS_LOCATE_IN]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_region_subregion.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Subregion {name: row.from}) MERGE (p2:Region {name: row.to}) MERGE (p1)-[r:SUBREGION_IS_LOCATE_IN]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_subregion_country.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Country {code: row.from}) MERGE (p2:Subregion {name: row.to}) MERGE (p1)-[r:COUNTRY_IS_LOCATE_IN]->(p2)
+;
+
+LOAD CSV WITH HEADERS FROM 'file:///relation_cices_division_group.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Cices_group {name: row.from}) MERGE (p2:Cices_division {name: row.to}) MERGE (p1)-[r:IS_A_GROUP_OF_CICES]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_cices_group_class.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Cices_class {code: row.from}) MERGE (p2:Cices_group {name: row.to}) MERGE (p1)-[r:IS_A_CLASS_OF_CICES]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_cices_section_division.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Cices_division {name: row.from}) MERGE (p2:Cices_section {name: row.to}) MERGE (p1)-[r:IS_A_DIVISION_OF_CICES]->(p2)
+;
+LOAD CSV WITH HEADERS FROM 'file:///relation_cices_class_value.tsv' AS row FIELDTERMINATOR '\t' MERGE (p1:Site {name: row.from}) MERGE (p2:Cices_class {code: row.to}) MERGE (p1)-[r:BELONGS_TO_CLASS_OF_CICES]->(p2)
+;
+
+MATCH (s:Site) WHERE s.int__per_hectare_per_year=0  SET s :Unknown;
+MATCH (s:Site) WHERE s.int__per_hectare_per_year<>0  SET s :Known;
+
+MATCH (s:Site) 
+WITH COLLECT(DISTINCT(s.protection_status)) AS statuses
+MATCH (s:Site)
+SET s.protection_status_one_hot = gds.alpha.ml.oneHotEncoding(statuses, [s.protection_status]);
+
+MATCH (s:Site) 
+WITH COLLECT(DISTINCT(s.beneficiary_unit)) AS units
+MATCH (s:Site)
+SET s.beneficiary_unit_one_hot = gds.alpha.ml.oneHotEncoding(units, [s.beneficiary_unit]);
+
+
+MATCH (s:Site)
+UNWIND s.valuation_methods as m
+WITH COLLECT(DISTINCT(m)) AS methods
+MATCH (s:Site)
+SET s.valuation_methods_one_hot = gds.alpha.ml.oneHotEncoding(methods, s.valuation_methods);
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+category	ecosystem_service	ecosystem_sub_service	code
+Provisioning	Food	Fish	11
+Provisioning	Food	Meat	12
+Provisioning	Food	Plants / vegetable food	13
+Provisioning	Food	NTFPs [food only!]	14
+Provisioning	Food	Food [unspecified]	15
+Provisioning	Food	Other	16
+Provisioning	Water	Drinking water	21
+Provisioning	Water	Industrial water	22
+Provisioning	Water	Water Other	23
+Provisioning	Water	Irrigation water [unnatural]	25
+Provisioning	Water	Water [unspecified]	26
+Provisioning	Raw materials	Fibers	31
+Provisioning	Raw materials	Timber	32
+Provisioning	Raw materials	Fuel wood and charcoal	33
+Provisioning	Raw materials	Fodder	34
+Provisioning	Raw materials	Fertiliser	35
+Provisioning	Raw materials	Other Raw	36
+Provisioning	Raw materials	Raw materials [unspecified]	37
+Provisioning	Raw materials	Sand, rock, gravel	38
+Provisioning	Raw materials	Biomass fuels	39
+Provisioning	Genetic resources	Plant genetic resources	41
+Provisioning	Genetic resources	Animal genetic resources	42
+Provisioning	Genetic resources	Genetic resources [unspecified]	43
+Provisioning	Medicinal resources	Biochemicals	51
+Provisioning	Medicinal resources	Models	52
+Provisioning	Medicinal resources	Test-organisms	53
+Provisioning	Medicinal resources	Bioprospecting	54
+Provisioning	Ornamental resources	Decorative Plants	61
+Provisioning	Ornamental resources	Fashion	62
+Provisioning	Ornamental resources	Decorations / Handicrafts	63
+Provisioning	Ornamental resources	Pets and captive animanls	64
+Regulating	Air quality regulation	Capturing fine dust	71
+Regulating	Air quality regulation	Air quality regulation [unspecified]	72
+Regulating	Air quality regulation	UVb-protection	73
+Regulating	Climate regulation	C-sequestration	81
+Regulating	Climate regulation	MDS-production	82
+Regulating	Climate regulation	Climate regulation [unspecified]	83
+Regulating	Climate regulation	Microclimate regulation	84
+Regulating	Climate regulation	Gas regulation	85
+Regulating	Moderation of extreme events	Storm protection	91
+Regulating	Moderation of extreme events	Flood prevention	92
+Regulating	Moderation of extreme events	Fire Prevention	93
+Regulating	Moderation of extreme events	Prevention of extreme events [unspecified]	94
+Regulating	Regulation of water flows	Drainage	101
+Regulating	Regulation of water flows	River discharge	102
+Regulating	Regulation of water flows	Natural irrigation	103
+Regulating	Regulation of water flows	Water regulation [unspecified]	104
+Regulating	Waste treatment	Water purification	111
+Regulating	Waste treatment	Soil detoxification	112
+Regulating	Waste treatment	Abatement of noise	113
+Regulating	Waste treatment	Waste treatment [unspecified]	114
+Regulating	Erosion prevention	Erosion prevention	121
+Regulating	Maintenance of soil fertility	Maintenance of soil structure	131
+Regulating	Maintenance of soil fertility	Deposition of nutrients	132
+Regulating	Maintenance of soil fertility	Soil formation	133
+Regulating	Maintenance of soil fertility	Nutrient cycling	134
+Regulating	Pollination	Pollination of crops	141
+Regulating	Pollination	Pollination of wild plants	142
+Regulating	Pollination	Pollination [unspecified]	143
+Regulating	Biological control	Seed dispersal	151
+Regulating	Biological control	Pest control	152
+Regulating	Biological control	Disease control	153
+Regulating	Biological control	Biological Control [unspecified]	154
+Habitat	Maintenance of life cycles	Nursery service	161
+Habitat	Maintenance of life cycles	Refugia for migratory and resident species	162
+Habitat	Maintenance of genetic diversity	Biodiversity protection	171
+Cultural	Aesthetic information	Attractive landscapes	181
+Cultural	Opportunities for recreation and tourism	Recreation	191
+Cultural	Opportunities for recreation and tourism	Tourism	192
+Cultural	Opportunities for recreation and tourism	Ecotourism	193
+Cultural	Opportunities for recreation and tourism	Hunting / fishing	194
+Cultural	Inspiration for culture, art and design	Artistic inspiration	201
+Cultural	Inspiration for culture, art and design	Cultural use	202
+Cultural	Inspiration for culture, art and design	Inspiration [unspecified]	203
+Cultural	Spiritual experience	Spiritual / Religious use	211
+Cultural	Information for cognitive development	Science / Research	221
+Cultural	Information for cognitive development	Education	222
+Cultural	Information for cognitive development	Cognitive [unspecified]	223
+Cultural	Existence, bequest values	Existence value	231
+Cultural	Existence, bequest values	Bequest value	232
