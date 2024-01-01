@@ -18,7 +18,7 @@ GDS
 Sklearn
 
 # Run
-1. Prepare data as described in "[Graph or Grove? Ecosystem Services Valuation with Graph Machine Learning and Random Forest](https://medium.com/@dgg32/graph-or-grove-ecosystem-services-valuation-with-graph-machine-learning-and-random-forest-31d92f686396)". 
+1. Download the ESVD data as described in "[Graph or Grove? Ecosystem Services Valuation with Graph Machine Learning and Random Forest](https://medium.com/@dgg32/graph-or-grove-ecosystem-services-valuation-with-graph-machine-learning-and-random-forest-31d92f686396)". 
   
 2. Install the necessary Python libraries
 
